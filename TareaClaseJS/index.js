@@ -1,51 +1,58 @@
-// 1)
-// Crear una función que tome una palabra y determine si empieza con 'G' (Mayúscula)
+//1 Crear una funcionque tome una palabra y determine si empieza con 'G'
 const startsWithG = (word) => {
-    return word.substr(0, 1) === 'G';
+    return word.startsWith("G");
 }
+console.log(startsWithG("Caballo"));
+console.log(startsWithG("Oveja"));
+console.log(startsWithG("Gallina"));
+console.log(startsWithG("Cabrito"));
 
-    console.log(startsWithG('Avocado'));
-    console.log(startsWithG('Grand Avocado'));
-​
-// 2)
-// Crear una función que toma un arreglo de nombres y devuelva otro sólo con lo que empiezan con G
-// Usar la función startsWithG
+//2 Crear una funcion que toma un arreglo de nombre y devuelve otro 
+//solo con lo que empieza con 'G'
+
 const namesWithG = (names) => {
     return names.filter(startsWithG);
 }
-​
 console.log(namesWithG(['Barbara', 'Cristian', 'Gino', 'Isadora', 'Joaquín', 'Manuel', 'Ramiro']));
-​
-​
-​
-// 3)
-// Crear una función que tome un número y devuelva su valor absoluto
+
+//3 Crear una funcion que tome un numero y devuelta su valor absoluto
+
 const abs = (num) => {
-    // Do something
+    return (Math.abs(num));
 }
-​
-console.log(abs(1), abs(-6), abs(0));
-​
-​
-​
-// 4)
-// Crear una función que tome un arreglo de números y devuelva su valor absoluto
-const abs2 = (numbers) => {
-    // Do something
+console.log(abs(0), abs(-2), abs(5));
+
+//4 Crear una funcion que tome un arreglo de numeros y devuelva su valor absoluto
+
+const absArray = (numbers) => {
+    return (Math.abs([numbers]));
 }
-​
-console.log(abs([1, -6, 0]));
-​
-​
-​
+console.log(absArray([0, -2, 5]));
+
 // Extra
 // Crear una función que tome un arreglo de números y devuelva su suma
+
 const sum = (numbers) => {
-    // Do something
+    return numbers.reduce((a,b) => a + b);
 }
-​
+console.log(sum([5, 7, 2, 1]));
+
 // Ahora hacer lo mismo pero sin usar ningúna otra función o sentencia
 // Ni reduce, ni forEach, ni for
-const sumNoFunctions = (numbers) => {
-    // Do something
-}
+// const sumNoFunctions = (numbers) => {
+//    if (numbers.length === 0) {
+//        return 0;
+//      } else {
+//        return numbers[0] + sumNoFunctions(numbers.slice(1));
+//      }
+//}
+
+//console.log(sumNoFunctions([3, 2, 1, 4]));
+
+// 
+
+//const absArrayNumbers = (numbers) => {
+//  return numbers.map(abs);
+//}
+
+//console.log(absArrayNumbers([1, -6, 0]));
