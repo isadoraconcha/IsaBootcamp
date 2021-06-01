@@ -63,7 +63,7 @@ console.log(esUnNumero(13));
 //        estaVendido: false
 //    },
 
-//   {
+//    {
 //        nombre: 'Lente Nikkor 50mm FX'
 //        precio: 239.900
 //        estaVendido: false
